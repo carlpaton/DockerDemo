@@ -1,0 +1,42 @@
+* Download VMware Workstation Player 
+Install VMware-player-14.1.1-7528167.exe
+
+
+* Download linux ISO
+alpine-virt-3.7.0-x86_64.iso
+
+
+* Steps to setup 'setup-alpine'
+~ when prompted for something and it has an option in square brackets just press enter as this is the default :D
+root
+setup-alpine
+us
+us
+localhost
+eth0
+dhcp
+no
+Root123
+UTC
+none
+f
+openssh
+chrony
+sda
+sys
+y
+** REBOOT
+
+
+* Add Nano (to edit)
+apk add nano
+
+
+* Steps to install docker on host VM
+apk update
+apk add docker
+
+
+* References
+https://wiki.alpinelinux.org/wiki/Docker
+https://wiki.alpinelinux.org/wiki/Alpine_Linux_package_management

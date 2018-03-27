@@ -1,5 +1,13 @@
-# DockerDemo
-Docker demo scripts for windows and linux containers
+# Docker (Linux)
+Look in '\DockerDemo\Docker (Linux)'
+
+ubuntu postgres.txt (Commands functional)
+alpine postgres.txt (Still needs some google'neering
+
+---------------------------------------------------------------------------------
+
+# Docker For Windows
+Look in '\DockerDemo\Docker For Windows'
 
 # PowerShell
 Run these commands to allow the ps1 scripts to execute
