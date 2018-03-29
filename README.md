@@ -71,15 +71,19 @@ Ignore the initial container kill/rm fails on 'postgres_p6'
 Connect to the postgres_p6 container instance on 127.0.0.1:62006
 
 # Other Docker Commands
-docker version                 ~ display version
-docker run hello-world         ~ run hello-world tester
-docker ps --all                ~ List containers
-docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" [CONTAINER NAME] ~ shows its IP to get around the WinNAT plow
-docker logs [CONTAINER NAME]
+- docker version                 ~ display version
+- docker run hello-world         ~ run hello-world tester
+- docker ps --all                ~ List containers
+- docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" [CONTAINER NAME] ~ shows its IP to get around the WinNAT plow
+- docker logs [CONTAINER NAME]
+- docker images                  ~ shows all the images on your disk.
+- docker container inspect [CONTAINER NAME]
 
 # Linux Commands
-ll ~ list files (same as DIR)
-la ~ list files horizontally
+- ll ~ list files (same as DIR)
+- la ~ list files horizontally
+- rm -r mydir
+- mkdir mydir
 
 # References
 
@@ -123,3 +127,8 @@ https://store.docker.com/images/mysql
 
 #### postgres
 https://store.docker.com/images/postgres
+
+#### microsoft/dotnet
+https://hub.docker.com/r/microsoft/aspnetcore/
+https://store.docker.com/images/dotnet
+https://docs.docker.com/engine/examples/dotnetcore/#create-a-dockerfile-for-an-aspnet-core-application
