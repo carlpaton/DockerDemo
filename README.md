@@ -1,11 +1,9 @@
 # Docker (Linux)
 Look in '\DockerDemo\Docker (Linux)\[OS NAME]'
 
-~ Each folder has a 'vm setup.txt' file with instructions
-
-~ Each container then listed below has a '.txt' help file and a bash script
-
-~ TODO : Complete Apline & RancherOS
+- Each folder has a 'vm setup.txt' file with instructions
+- Each container then listed below has a '.txt' help file and a bash script
+- TODO : Complete Apline & RancherOS
 
 ## postgres
 
@@ -19,11 +17,9 @@ Note the IP on the Linux VM with `ip addr show`
 
 ### Create bash script
 
-sudo nano postgres.sh ~ add content from '\DockerDemo\Docker (Linux)\Ubuntu\postgres.sh' ~ update the -p switch with your IPr 
-
-sudo chmod +x postgres.sh ~ This marks its as mark executable
-
-sudo ./postgres.sh ~ runs the script
+- sudo nano postgres.sh ~ add content from '\DockerDemo\Docker (Linux)\Ubuntu\postgres.sh' ~ update the -p switch with your IPr 
+- sudo chmod +x postgres.sh ~ This marks its as mark executable
+- sudo ./postgres.sh ~ runs the script
 
 This will then create your container, you can then connect to it from DBeaver / pgAdmin
 
@@ -81,11 +77,14 @@ docker ps --all                ~ List containers
 docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" [CONTAINER NAME] ~ shows its IP to get around the WinNAT plow
 docker logs [CONTAINER NAME]
 
-# Lunux Commands
+# Linux Commands
 ll ~ list files (same as DIR)
 la ~ list files horizontally
 
 # References
+
+## PuTTY
+https://community.nxp.com/thread/220596
 
 ## VMware Workstation Player 
 https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/14_0
