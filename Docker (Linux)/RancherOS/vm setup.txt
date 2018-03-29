@@ -1,0 +1,10 @@
+* Host  
+~ this doesnt seem to work nicely with 'VMware Workstation Player'
+~ It needs Docker Machine & Virtual box :(
+
+
+* Download linux ISO
+rancheros.iso
+
+
+* 

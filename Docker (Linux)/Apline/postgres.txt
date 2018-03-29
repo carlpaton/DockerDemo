@@ -1,0 +1,2 @@
+* Steps to install docker on host VM
+apk update

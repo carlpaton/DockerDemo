@@ -9,8 +9,8 @@ Try
 	#remove container mysql_p5 (this deletes it)
 	docker rm mysql_p5
 	
-	#spin up a new mysql container on port 52005 called mysql_p5
-	docker run --detach --name=mysql_p5 -p 127.0.0.1:52005:3306  --env="MYSQL_ROOT_PASSWORD=root" mysql
+	#spin up a new mysql container on port 62005 called mysql_p5
+	docker run --detach --name=mysql_p5 -p 127.0.0.1:62005:3306  --env="MYSQL_ROOT_PASSWORD=root" mysql
 	
 	#start the container
 	docker start mysql_p5

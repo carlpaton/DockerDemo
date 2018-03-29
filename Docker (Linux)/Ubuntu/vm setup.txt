@@ -4,14 +4,14 @@ Install VMware-player-14.1.1-7528167.exe
 
 * Download linux ISO
 ubuntu-17.10.1-desktop-amd64.iso
-ubuntu-17.10.1-server-amd64.iso (this is a better option as a GUI is not needed)
+ubuntu-17.10.1-server-amd64.iso (GUIs face :D)
 Add to VMware-player, root username/password -> carl/password1
 
 
 * Steps to install docker on host VM
-
 (0) Allow Putty Session for remote management
 sudo apt-get install openssh-server
+~ after doing this you can putty/ssh to the server (and paste commands ~ again Im lazy :D)
 
 (1) Set up the docker repository
 sudo apt-get update
@@ -28,18 +28,3 @@ sudo docker run hello-world
 
 (4) Find the IP on the Linux VM
 ip addr show
-
-(5) Setup Postgres Docker Container on the Linux VM
-sudo docker pull postgres
-sudo docker container kill postgres_p6
-sudo docker rm postgres_p6
-sudo docker run --detach --name=postgres_p6 -p 192.168.231.129:62006:5432  --env="POSTGRES_PASSWORD=postgres" postgres
-sudo docker start postgres_p6
-sudo docker ps --all	
-
-
-* References
-https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/14_0
-https://www.ubuntu.com/download/desktop
-https://askubuntu.com/questions/938700/how-do-i-install-docker-on-ubuntu-16-04-lts
-https://docs.docker.com/install/linux/docker-ce/ubuntu/
