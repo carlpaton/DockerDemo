@@ -1,7 +1,10 @@
 # Docker (Linux)
 Look in '\DockerDemo\Docker (Linux)\[OS NAME]'
+
 ~ Each folder has a 'vm setup.txt' file with instructions
+
 ~ Each container then listed below has a '.txt' help file and a bash script
+
 ~ TODO : Complete Apline & RancherOS
 
 ## postgres
@@ -11,12 +14,15 @@ Look in '\DockerDemo\Docker (Linux)\[OS NAME]'
 
 ### Get VM IP
 Note the IP on the Linux VM with `ip addr show` 
+
 ~ Example: 192.168.231.129
 
 ### Create bash script
 
 sudo nano postgres.sh ~ add content from '\DockerDemo\Docker (Linux)\Ubuntu\postgres.sh' ~ update the -p switch with your IPr 
+
 sudo chmod +x postgres.sh ~ This marks its as mark executable
+
 sudo ./postgres.sh ~ runs the script
 
 This will then create your container, you can then connect to it from DBeaver / pgAdmin
