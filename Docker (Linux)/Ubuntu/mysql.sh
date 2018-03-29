@@ -1,7 +1,4 @@
-(1) Find the IP on the Linux VM
-ip addr show
-
-(2) Setup MYSQL Docker Container on the Linux VM
+#!/bin/bash
 sudo docker pull mysql
 sudo docker container kill mysql_p7
 sudo docker rm mysql_p7

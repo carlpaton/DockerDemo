@@ -7,24 +7,28 @@ ubuntu-17.10.1-desktop-amd64.iso
 ubuntu-17.10.1-server-amd64.iso (GUIs face :D)
 Add to VMware-player, root username/password -> carl/password1
 
+(0) Find the IP on the Linux VM
+ip addr show
 
-* Steps to install docker on host VM
-(0) Allow Putty Session for remote management
+
+(1) Allow Putty Session for remote management
 sudo apt-get install openssh-server
 ~ after doing this you can putty/ssh to the server (and paste commands ~ again Im lazy :D)
+~ use the IP from the result in step (0)
 
-(1) Set up the docker repository
+
+* Steps to install docker on host VM
+
+(2) Set up the docker repository
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
-(2) Install Docker CE
+(3) Install Docker CE
 sudo apt-get update
 sudo apt-get install docker-ce
 
-(3) Verify the installation
+(4) Verify the installation
 sudo docker run hello-world
 
-(4) Find the IP on the Linux VM
-ip addr show

@@ -5,13 +5,27 @@ Look in '\DockerDemo\Docker (Linux)\[OS NAME]'
 ~ TODO : Complete Apline & RancherOS
 
 ## postgres
-~ \DockerDemo\Docker (Linux)\Ubuntu\postgres\
+
+### Bash Script
+~ \DockerDemo\Docker (Linux)\Ubuntu\postgres.sh 
+
+### Get VM IP
+Note the IP on the Linux VM with `ip addr show` 
+~ Example: 192.168.231.129
+
+### Create bash script
+
+sudo nano postgres.sh ~ add content from '\DockerDemo\Docker (Linux)\Ubuntu\postgres.sh' ~ update the -p switch with your IPr 
+sudo chmod +x postgres.sh ~ This marks its as mark executable
+sudo ./postgres.sh ~ runs the script
+
+This will then create your container, you can then connect to it from DBeaver / pgAdmin
 
 ## mysql
-~ \DockerDemo\Docker (Linux)\Ubuntu\mysql\
+~ \DockerDemo\Docker (Linux)\Ubuntu\mysql.sh
 
 ## mssql-server-linux
-~ \DockerDemo\Docker (Linux)\Ubuntu\mssql-server-linux
+~ \DockerDemo\Docker (Linux)\Ubuntu\mssql-server-linux.sh
 
 # Docker For Windows
 Look in '\DockerDemo\Docker For Windows'
@@ -61,6 +75,10 @@ docker ps --all                ~ List containers
 docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" [CONTAINER NAME] ~ shows its IP to get around the WinNAT plow
 docker logs [CONTAINER NAME]
 
+# Lunux Commands
+ll ~ list files (same as DIR)
+la ~ list files horizontally
+
 # References
 
 ## VMware Workstation Player 
@@ -70,6 +88,7 @@ https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_works
 https://docs.docker.com/engine/reference/commandline/logs/
 
 ### Linux Operating Systems
+https://askubuntu.com/questions/223691/how-do-i-create-a-script-file-for-terminal-commands/223698
 
 #### Ubuntu
 https://www.ubuntu.com/download/desktop

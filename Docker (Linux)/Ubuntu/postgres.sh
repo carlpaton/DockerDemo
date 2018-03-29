@@ -1,7 +1,4 @@
-(1) Find the IP on the Linux VM
-ip addr show
-
-(2) Setup Postgres Docker Container on the Linux VM
+#!/bin/bash
 sudo docker pull postgres
 sudo docker container kill postgres_p6
 sudo docker rm postgres_p6

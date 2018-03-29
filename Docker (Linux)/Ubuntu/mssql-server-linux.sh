@@ -1,7 +1,4 @@
-(1) Find the IP on the Linux VM
-ip addr show
-
-(2) Setup Postgres Docker Container on the Linux VM
+#!/bin/bash
 sudo docker pull microsoft/mssql-server-linux:2017-CU5
 sudo docker container kill mssql_p5
 sudo docker rm mssql_p5
