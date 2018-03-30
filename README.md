@@ -33,9 +33,9 @@ This will then create your container, you can then connect to it from DBeaver / 
 Look in '\DockerDemo\Docker For Windows'
 
 ## Prerequisite download
-Download Docker for windows CE from https://www.docker.com/docker-windows
-Run the install, windows will re-boot a few times and install some updates.
-The linux VM lives here, C:\Users\Public\Documents\Hyper-V\Virtual hard disks\  ~ try not to upset it.
+- Download Docker for windows CE from https://www.docker.com/docker-windows
+- Run the install, windows will re-boot a few times and install some updates.
+- The linux VM lives here, C:\Users\Public\Documents\Hyper-V\Virtual hard disks\  ~ try not to upset it.
 
 ## PowerShell
 Run these commands to allow the ps1 scripts to execute
@@ -48,27 +48,27 @@ CD quickly to the location you clone the repository too, I saved this as 'C:\Use
 Set-Location -Path C:\Dev-Code-School\DockerDemo
 
 ### Windows Containers
-NB - Switch docker for windows to run as 'WINDOWS CONTAINERS' from the system tray.
-Run \DockerDemo\Docker For Windows\windows containers\aspnet\build-container-aspnet.ps1
-The initial image pull WILL TAKE SOME TIME, ignore the initial container kill/rm fails on 'aspnet-site'
-Open the given IP in your browser. The WEB API helpfile is shown from the projects 'HelpPage' area
-Source code for the sample API is here ~ \DockerDemo\Sample API Code\WebApi\
+- NB - Switch docker for windows to run as 'WINDOWS CONTAINERS' from the system tray.
+- Run \DockerDemo\Docker For Windows\windows containers\aspnet\build-container-aspnet.ps1
+- The initial image pull WILL TAKE SOME TIME, ignore the initial container kill/rm fails on 'aspnet-site'
+- Open the given IP in your browser. The WEB API helpfile is shown from the projects 'HelpPage' area
+- Source code for the sample API is here ~ \DockerDemo\Sample API Code\WebApi\
 
-Run \DockerDemo\Docker For Windows\windows containers\iis\build-container-iissite.ps1
-The initial image pull will take some time, ignore the initial container kill/rm fails on 'iis-site'
-Open the given IP in your browser on Port 80, default IIS landing screen is shown
-Open the given IP in your browser on Port 81, content\index.htm is shown
+- Run \DockerDemo\Docker For Windows\windows containers\iis\build-container-iissite.ps1
+- The initial image pull will take some time, ignore the initial container kill/rm fails on 'iis-site'
+- Open the given IP in your browser on Port 80, default IIS landing screen is shown
+- Open the given IP in your browser on Port 81, content\index.htm is shown
 
 ### Linux Containers
-NB - Switch docker for windows to run as 'LINUX CONTAINERS' from the system tray.
-Run \DockerDemo\Docker For Windows\linux containers\mysql\create-container-mysql_p5.ps1
-Ignore the initial container kill/rm fails on 'mysql_p5'
-Connect to the mysql_p5 container instance on 127.0.0.1:62005
-There are some fly scripts at \DockerDemo\linux\mysql\flyway ~ These can be added to the powershell script or run manually.
+- NB - Switch docker for windows to run as 'LINUX CONTAINERS' from the system tray.
+- Run \DockerDemo\Docker For Windows\linux containers\mysql\create-container-mysql_p5.ps1
+- Ignore the initial container kill/rm fails on 'mysql_p5'
+- Connect to the mysql_p5 container instance on 127.0.0.1:62005
+- There are some fly scripts at \DockerDemo\linux\mysql\flyway ~ These can be added to the powershell script or run manually.
 
-Run C:\Dev-Code-School\DockerDemo\Docker For Windows\linux containers\postgresql\create-container-postgres_p6.ps1
-Ignore the initial container kill/rm fails on 'postgres_p6'
-Connect to the postgres_p6 container instance on 127.0.0.1:62006
+- Run C:\Dev-Code-School\DockerDemo\Docker For Windows\linux containers\postgresql\create-container-postgres_p6.ps1
+- Ignore the initial container kill/rm fails on 'postgres_p6'
+- Connect to the postgres_p6 container instance on 127.0.0.1:62006
 
 # Other Docker Commands
 - docker version                 ~ display version
@@ -95,6 +95,7 @@ https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_works
 
 ## Docker
 https://docs.docker.com/engine/reference/commandline/logs/
+https://docs.docker.com/config/pruning/
 
 ### Linux Operating Systems
 https://askubuntu.com/questions/223691/how-do-i-create-a-script-file-for-terminal-commands/223698
