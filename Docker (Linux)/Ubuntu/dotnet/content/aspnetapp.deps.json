@@ -6,14 +6,14 @@
   "compilationOptions": {
     "defines": [
       "TRACE",
-      "RELEASE",
+      "DEBUG",
       "NETCOREAPP2_0"
     ],
     "languageVersion": "",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
-    "optimize": true,
+    "optimize": false,
     "keyFile": "",
     "emitEntryPoint": true,
     "xmlDoc": false,
@@ -21,16 +21,16 @@
   },
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "WebApiCore2/1.0.0": {
+      "aspnetapp/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.6",
           "Microsoft.NETCore.App": "2.0.0"
         },
         "runtime": {
-          "WebApiCore2.dll": {}
+          "aspnetapp.dll": {}
         },
         "compile": {
-          "WebApiCore2.dll": {}
+          "aspnetapp.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -3973,7 +3973,7 @@
     }
   },
   "libraries": {
-    "WebApiCore2/1.0.0": {
+    "aspnetapp/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

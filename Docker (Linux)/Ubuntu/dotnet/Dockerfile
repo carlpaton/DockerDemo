@@ -3,4 +3,4 @@ FROM microsoft/aspnetcore:2.0
 WORKDIR /app
 COPY ./content .
 
-ENTRYPOINT ["dotnet", "WebApiCore2.dll"]
+ENTRYPOINT ["dotnet", "aspnetapp.dll"]
