@@ -5,7 +5,7 @@ Install VMware-player-14.1.1-7528167.exe
 * Download linux ISO
 ubuntu-17.10.1-desktop-amd64.iso
 ubuntu-17.10.1-server-amd64.iso (GUIs face :D)
-Add to VMware-player, root username/password -> carl/password1
+Add to VMware-player, root username/password -> carl/carl
 
 (0) Find the IP on the Linux VM
 ip addr show
