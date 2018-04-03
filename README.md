@@ -74,16 +74,27 @@ Set-Location -Path C:\Dev-Code-School\DockerDemo
 - docker version                 ~ display version
 - docker run hello-world         ~ run hello-world tester
 - docker ps --all                ~ List containers
+- docker network ls              ~ List Docker’s networks
+- docker network inspect [NETWORK NAME]
 - docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" [CONTAINER NAME] ~ shows its IP to get around the WinNAT plow
 - docker logs [CONTAINER NAME]
 - docker images                  ~ shows all the images on your disk.
 - docker container inspect [CONTAINER NAME]
+
+# Docker commands ???
+
+sudo docker network connect bridge postgres_nb
 
 # Linux Commands
 - ll ~ list files (same as DIR)
 - la ~ list files horizontally
 - rm -r mydir
 - mkdir mydir
+
+# Zip
+- sudo apt-get update
+- sudo apt-get install zip unzip
+~ sudo unzip content.zip
 
 # References
 
