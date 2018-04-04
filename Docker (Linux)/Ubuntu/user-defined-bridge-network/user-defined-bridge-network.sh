@@ -33,9 +33,10 @@ sudo docker run --name dotnet_webapi_gg -p 192.168.231.129:80:80 --network golde
 sudo docker ps --all
 sudo docker network ls
 
-#option to add the container to user defined network after spinning it up
+#option to connect/disconnect a container to user defined network after spinning it up
 #sudo docker network connect golden-gate [CONTAINER NAME]
 #sudo docker network connect bridge [CONTAINER NAME]
+#sudo docker network disconnect golden-gate [CONTAINER NAME]
 
 #create EXEC session to container
 #sudo docker exec -it 279 sh (where 279 is the start of the container ID)
