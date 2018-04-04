@@ -81,15 +81,12 @@ Set-Location -Path C:\Dev-Code-School\DockerDemo
 - docker images                  ~ shows all the images on your disk.
 - docker container inspect [CONTAINER NAME]
 
-# Docker commands ???
-
-sudo docker network connect bridge postgres_nb
-
 # Linux Commands
 - ll ~ list files (same as DIR)
 - la ~ list files horizontally
 - rm -r mydir
 - mkdir mydir
+- sudo shutdown
 
 # Zip
 - sudo apt-get update
