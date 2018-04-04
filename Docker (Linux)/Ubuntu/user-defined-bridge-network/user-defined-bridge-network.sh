@@ -14,7 +14,7 @@ sudo docker network rm postgres-net
 sudo docker network create --driver bridge postgres-net
 
 #Psql container
-sudo docker run --name postgres_nb -e "POSTGRES_PASSWORD=postgres" --network postgres-net -itd postgres:9.6-alpine
+sudo docker run --name postgres_nb -p 5432:5432 -e "POSTGRES_PASSWORD=postgres" --network postgres-net -itd postgres:9.6-alpine
 
 #dotnet-site_nb image
 sudo docker rmi image_name:dotnet-image_nb
@@ -27,3 +27,6 @@ sudo docker run --name dotnet-site_nb -p 192.168.231.129:80:80 --network postgre
 #display new containers & bridge
 sudo docker ps --all
 sudo docker network ls
+
+#option to add the container to user defined network after spinning it up??
+#sudo docker network connect bridge postgres_nb
