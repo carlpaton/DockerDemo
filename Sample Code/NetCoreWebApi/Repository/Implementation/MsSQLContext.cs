@@ -15,7 +15,7 @@ namespace Repository.Implementation
         public MsSQLContext()
         {
             //TODO ~ pass into ctor or read from config
-            _connectionString = "Server=192.168.231.129,62005;Database=flyway_demo;User Id=sa;Password=Password123;";
+            _connectionString = "Server=192.168.231.134,62005;Database=flyway_demo;User Id=sa;Password=Password123;";
 
             _dbConn = new SqlConnection(_connectionString);
             DefaultTypeMap.MatchNamesWithUnderscores = true;

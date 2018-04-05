@@ -9,7 +9,7 @@ namespace Repository.Implementation.PostgreSQL
         public EmployeeModel Select(int id)
         {
             var sql = @"
-SELECT * FROM employee 
+SELECT * FROM public.employee 
 WHERE Id = @id;";
             return Select<EmployeeModel>(sql, new { id });
         }
@@ -17,7 +17,7 @@ WHERE Id = @id;";
         public List<EmployeeModel> SelectList()
         {
             var sql = @"
-SELECT * FROM employee 
+SELECT * FROM public.employee 
 ORDER BY id;";
             return SelectList<EmployeeModel>(sql);
         }

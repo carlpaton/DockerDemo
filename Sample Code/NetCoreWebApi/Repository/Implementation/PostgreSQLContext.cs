@@ -16,11 +16,11 @@ namespace Repository.Implementation
         {
             //TODO ~ pass into ctor or read from config
 
-            //Bridge to host (open to notebook)
-            //_connectionString = "Server=192.168.231.129;Port=62006;Database=flyway_demo;User Id=postgres;Password=postgres;";
+            //Default bridge
+            _connectionString = "Server=192.168.231.134;Port=62006;Database=postgres;User Id=postgres;Password=postgres;";
 
-            //Private Network Bridge
-            _connectionString = "Server=172.18.0.2;Port=5432;Database=postgres;User Id=postgres;Password=postgres;";
+            //Golden-gate bridge (this is the IP of the PSQL container)
+            //_connectionString = "Server=172.18.0.2;Port=5432;Database=postgres;User Id=postgres;Password=postgres;";
 
             _dbConn = new NpgsqlConnection(_connectionString);
             DefaultTypeMap.MatchNamesWithUnderscores = true;

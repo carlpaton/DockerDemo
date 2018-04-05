@@ -15,7 +15,7 @@ namespace Repository.Implementation
         public MySQLContext()
         {
             //TODO ~ pass into ctor or read from config
-            _connectionString = "Server=192.168.231.129;Port=62007;Database=flyway_demo;UID=root;PASSWORD=root;";
+            _connectionString = "Server=192.168.231.134;Port=62007;Database=flyway_demo;UID=root;PASSWORD=root;";
 
             _dbConn = new MySqlConnection(_connectionString);
             DefaultTypeMap.MatchNamesWithUnderscores = true;
