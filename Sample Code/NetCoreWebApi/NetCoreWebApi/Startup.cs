@@ -20,10 +20,18 @@ namespace NetCoreWebApi
         {
             services.AddMvc();
 
-            //DI is only being used for the Postgres db
-            services.AddTransient<IEmployeeRepository, Repository.Implementation.PostgreSQL.EmployeeRepository>();
-            //services.AddTransient<IEmployeeRepository, Repository.Implementation.MsSQL.EmployeeRepository>();
-            //services.AddTransient<IEmployeeRepository, Repository.Implementation.MySQL.EmployeeRepository>();
+            //DI Repository
+            //services.AddTransient<IStaffMasterRepository, Repository.Implementation.PostgreSQL.EmployeeRepository>();
+            //services.AddTransient<IStaffMasterRepository, Repository.Implementation.MySQL.EmployeeRepository>();
+
+            //DI for appsettings ~ https://blog.elmah.io/appsettings-in-aspnetcore/
+            //Cant use DI when more than one db uses the same interface, so I moved the connection strings for 'ConnMySQL' & 'ConnPgSQL' to appsettings
+            var appSettings = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettings);
+
+            //https://cmatskas.com/net-core-dependency-injection-with-constructor-parameters-2/
+            var connMsSQL = Configuration.GetConnectionString("ConnMsSQL");
+            services.AddTransient<IStaffMasterRepository> (s => new Repository.Implementation.MsSQL.StaffMasterRepository(connMsSQL));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -12,12 +12,11 @@ namespace Repository.Implementation
         private readonly SqlConnection _dbConn;
         private string _connectionString = "";
 
-        public MsSQLContext()
+        public MsSQLContext(string connectionString)
         {
-            //TODO ~ pass into ctor or read from config
-            _connectionString = "Server=192.168.231.134,62005;Database=flyway_demo;User Id=sa;Password=Password123;";
-
+            _connectionString = connectionString;
             _dbConn = new SqlConnection(_connectionString);
+
             DefaultTypeMap.MatchNamesWithUnderscores = true;
         }
 

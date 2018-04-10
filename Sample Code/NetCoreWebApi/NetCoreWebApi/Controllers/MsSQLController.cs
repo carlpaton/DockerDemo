@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Repository.Implementation.MsSQL;
 using Repository.Interface;
 
 namespace NetCoreWebApi.Controllers
@@ -7,17 +6,11 @@ namespace NetCoreWebApi.Controllers
     [Route("api/[controller]")]
     public class MsSQLController : Controller
     {
-        private readonly IEmployeeRepository _context;
+        private readonly IStaffMasterRepository _context;
 
-        //Cant use DI when more than one db uses the same interface
-        //MsSQLController(IEmployeeRepository context)
-        //{
-        //    _context = context;
-        //}
-
-        public MsSQLController()
+        public MsSQLController(IStaffMasterRepository context)
         {
-            _context = new EmployeeRepository();
+            _context = context;
         }
 
         // GET api/mssql

@@ -12,11 +12,9 @@ namespace Repository.Implementation
         private readonly MySqlConnection _dbConn;
         private string _connectionString = "";
 
-        public MySQLContext()
+        public MySQLContext(string connectionString)
         {
-            //TODO ~ pass into ctor or read from config
-            _connectionString = "Server=192.168.231.134;Port=62007;Database=flyway_demo;UID=root;PASSWORD=root;";
-
+            _connectionString = connectionString;
             _dbConn = new MySqlConnection(_connectionString);
             DefaultTypeMap.MatchNamesWithUnderscores = true;
         }

@@ -1,16 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Repository.Implementation.PgSQL;
 using Repository.Interface;
 
 namespace NetCoreWebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class PostgresController : Controller
+    public class PgSQLController : Controller
     {
-        private readonly IEmployeeRepository _context;
+        private readonly IStaffMasterRepository _context;
+        private readonly AppSettings _appSettings;
 
-        public PostgresController(IEmployeeRepository context)
+        public PgSQLController(IOptions<AppSettings> appSettings)
         {
-            _context = context;
+            _appSettings = appSettings.Value;
+            _context = new StaffMasterRepository(_appSettings.ConnPgSQL); //Cant use DI when more than one db uses the same interface -> IStaffMasterRepository
         }
 
         // GET api/postgres

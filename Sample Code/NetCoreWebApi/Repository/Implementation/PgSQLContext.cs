@@ -7,21 +7,14 @@ using System.Linq;
 
 namespace Repository.Implementation
 {
-    public class PostgreSQLContext : IDisposable, IBaseContext
+    public class PgSQLContext : IDisposable, IBaseContext
     {
         private readonly NpgsqlConnection _dbConn;
         private string _connectionString = "";
 
-        public PostgreSQLContext()
+        public PgSQLContext(string connectionString)
         {
-            //TODO ~ pass into ctor or read from config
-
-            //Default bridge
-            _connectionString = "Server=192.168.231.134;Port=62006;Database=postgres;User Id=postgres;Password=postgres;";
-
-            //Golden-gate bridge (this is the IP of the PSQL container)
-            //_connectionString = "Server=172.18.0.2;Port=5432;Database=postgres;User Id=postgres;Password=postgres;";
-
+            _connectionString = connectionString;
             _dbConn = new NpgsqlConnection(_connectionString);
             DefaultTypeMap.MatchNamesWithUnderscores = true;
         }

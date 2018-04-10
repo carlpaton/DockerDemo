@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Repository.Implementation.MySQL;
 using Repository.Interface;
 
@@ -7,17 +8,13 @@ namespace NetCoreWebApi.Controllers
     [Route("api/[controller]")]
     public class MySQLController : Controller
     {
-        private readonly IEmployeeRepository _context;
+        private readonly IStaffMasterRepository _context;
+        private readonly AppSettings _appSettings;
 
-        //Cant use DI when more than one db uses the same interface
-        //MySQLController(IEmployeeRepository context)
-        //{
-        //    _context = context;
-        //}
-
-        public MySQLController()
+        public MySQLController(IOptions<AppSettings> appSettings)
         {
-            _context = new EmployeeRepository();
+            _appSettings = appSettings.Value;
+            _context = new StaffMasterRepository(_appSettings.ConnMySQL); //Cant use DI when more than one db uses the same interface -> IStaffMasterRepository
         }
 
         // GET api/mysql
