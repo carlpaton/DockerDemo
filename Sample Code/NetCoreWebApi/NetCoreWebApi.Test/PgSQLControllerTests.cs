@@ -8,13 +8,13 @@ using System.Collections.Generic;
 namespace NetCoreWebApi.Test
 {
     [TestClass]
-    public class MySQLControllerTests
+    public class PgSQLControllerTests
     {
         [TestMethod]
-        public void MySQL_Get()
+        public void Postgres_Get()
         {
             // Act
-            var controller = new MySQLController(Inject());
+            var controller = new PgSQLController(Inject());
             var response = controller.Get();
 
             // Arrange
@@ -25,10 +25,10 @@ namespace NetCoreWebApi.Test
         }
 
         [TestMethod]
-        public void MySQL_GetById()
+        public void Postgres_GetById()
         {
             // Act
-            var controller = new MySQLController(Inject());
+            var controller = new PgSQLController(Inject());
             var response = controller.Get(1);
 
             // Arrange
@@ -44,7 +44,7 @@ namespace NetCoreWebApi.Test
             var config = new ConfigurationBuilder().AddJsonFile("appsettings.Development.json").Build();
             var d = config.GetSection("AppSettings");
 
-            var appSettings = new AppSettings() { ConnMySQL = d["ConnMySQL"] };
+            var appSettings = new AppSettings() { ConnPgSQL = d["ConnPgSQL"] };
             var options = Options.Create(appSettings);
 
             return options;

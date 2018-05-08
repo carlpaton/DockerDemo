@@ -14,7 +14,7 @@ namespace NetCoreWebApi.Test
         public void MsSQL_Get()
         {
             // Act
-            var controller = new MsSQLController(GetRepository());
+            var controller = new MsSQLController(Inject());
             var response = controller.Get();
 
             // Arrange
@@ -28,7 +28,7 @@ namespace NetCoreWebApi.Test
         public void MsSQL_GetById()
         {
             // Act
-            var controller = new MsSQLController(GetRepository());
+            var controller = new MsSQLController(Inject());
             var response = controller.Get(1);
 
             // Arrange
@@ -39,7 +39,7 @@ namespace NetCoreWebApi.Test
         }
 
         #region helpers
-        private StaffMasterRepository GetRepository()
+        private StaffMasterRepository Inject()
         {
             var config = new ConfigurationBuilder().AddJsonFile("appsettings.Development.json").Build();
             var connMsSQL = config.GetConnectionString("ConnMsSQL");

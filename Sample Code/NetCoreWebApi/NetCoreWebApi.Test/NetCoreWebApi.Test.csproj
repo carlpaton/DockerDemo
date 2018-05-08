@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="MySQLControllerTests.cs" />
-    <Compile Remove="PostgresControllerTests.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="appsettings.Development.json" />
   </ItemGroup>
 
