@@ -13,7 +13,9 @@ sudo docker pull microsoft/dotnet-samples:aspnetapp
 
 #UTILS
 #flyway-docker
-sudo docker pull boxfuse/flyway:5.0.7
+sudo docker pull boxfuse/flyway:5.1
+#postgrest api
+sudo docker pull postgrest/postgrest:v0.5.0.0
 
 
 #DATABASE
@@ -23,3 +25,7 @@ sudo docker pull postgres:9.6-alpine
 sudo docker pull microsoft/mssql-server-linux:2017-CU5
 #mysql
 sudo docker pull mysql:5.7.21
+
+
+#CUSTOM
+sudo docker pull carlpaton/fizzbuzz:v1.1.0
