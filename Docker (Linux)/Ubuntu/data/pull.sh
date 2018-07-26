@@ -16,7 +16,8 @@ sudo docker pull microsoft/dotnet-samples:aspnetapp
 sudo docker pull boxfuse/flyway:5.1
 #postgrest api
 sudo docker pull postgrest/postgrest:v0.5.0.0
-
+#docker
+sudo docker pull sonarqube:6.7.4
 
 #DATABASE
 #postgres
