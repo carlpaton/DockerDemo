@@ -1,0 +1,12 @@
+services:
+  my-busybox:
+    image: busybox:1.37.0
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    environment:
+      SOME_URL: https://google.com
+    volumes:
+      - ./data1:/data1
+      - type: bind
+        source: ./data2/
+        target: /container-data2
